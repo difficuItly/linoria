@@ -1212,11 +1212,16 @@ do
             Size = UDim2.new(1, 0, 1, 0);
             ZIndex = 6;
             Parent = DividerOuter;
+        });
 
-            local DividerGradient = Instance.new("UIGradient");
-            DividerGradient.Rotation = 180;
-            DividerGradient.Color = ColorSequence.new({ ColorSequenceKeypoint.new(0,Library.BackgroundColor), ColorSequenceKeypoint.new(0.5, Library.AccentColor), ColorSequenceKeypoint.new(1.00, Library.BackgroundColor) });
-            DividerGradient.Parent = DividerInner;
+        local DividerGradient = Library:Create('UIGradient', {
+            Rotation = 180;
+            Color = ColorSequence.new({ 
+                ColorSequenceKeypoint.new(0,Library.BackgroundColor), 
+                ColorSequenceKeypoint.new(0.5, Library.AccentColor), 
+                ColorSequenceKeypoint.new(1.00, Library.BackgroundColor) 
+            });
+            Parent = DividerInner;
         });
 
         Library:AddToRegistry(DividerOuter, {
