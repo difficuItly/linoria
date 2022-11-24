@@ -1217,8 +1217,10 @@ do
         local DividerGradient = Library:Create('UIGradient', {
             Color = ColorSequence.new({ 
                 ColorSequenceKeypoint.new(0,Library.BackgroundColor), 
+                ColorSequenceKeypoint.new(0.2,Library.BackgroundColor), 
                 ColorSequenceKeypoint.new(0.5, Library.AccentColor), 
-                ColorSequenceKeypoint.new(1.00, Library.BackgroundColor) 
+                ColorSequenceKeypoint.new(0.8,Library.BackgroundColor), 
+                ColorSequenceKeypoint.new(1, Library.BackgroundColor) 
             });
             Rotation = 90;
             Parent = DividerInner;
@@ -1231,6 +1233,16 @@ do
         Library:AddToRegistry(DividerInner, {
             BackgroundColor3 = Color3.fromRGB(255, 255, 255);
             BorderColor3 = 'OutlineColor';
+        });
+
+        Library:AddToRegistry(DividerGradient, {
+            Color = ColorSequence.new({ 
+                ColorSequenceKeypoint.new(0,Library.BackgroundColor), 
+                ColorSequenceKeypoint.new(0.2,Library.BackgroundColor), 
+                ColorSequenceKeypoint.new(0.5, Library.AccentColor), 
+                ColorSequenceKeypoint.new(0.8,Library.BackgroundColor), 
+                ColorSequenceKeypoint.new(1, Library.BackgroundColor) 
+            });
         });
 
         Groupbox:AddBlank(9);
