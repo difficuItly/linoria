@@ -1215,12 +1215,12 @@ do
         });
 
         local DividerGradient = Library:Create('UIGradient', {
-            Rotation = 180;
             Color = ColorSequence.new({ 
                 ColorSequenceKeypoint.new(0,Library.BackgroundColor), 
                 ColorSequenceKeypoint.new(0.5, Library.AccentColor), 
                 ColorSequenceKeypoint.new(1.00, Library.BackgroundColor) 
             });
+            Rotation = 90;
             Parent = DividerInner;
         });
 
