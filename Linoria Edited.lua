@@ -1229,7 +1229,7 @@ do
         });
 
         Library:AddToRegistry(DividerInner, {
-            BackgroundColor3 = 'MainColor';
+            BackgroundColor3 = Color3.fromRGB(255, 255, 255);
             BorderColor3 = 'OutlineColor';
         });
 
