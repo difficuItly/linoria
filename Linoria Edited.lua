@@ -1204,6 +1204,7 @@ do
             Parent = Container;
         });
 
+
         local DividerInner = Library:Create('Frame', {
             BackgroundColor3 = Library.MainColor;
             BorderColor3 = Library.OutlineColor;
@@ -1211,6 +1212,11 @@ do
             Size = UDim2.new(1, 0, 1, 0);
             ZIndex = 6;
             Parent = DividerOuter;
+
+            Divider.Gradient = Instance.new("UIGradient");
+            Divider.Gradient.Rotation = 180;
+            Divider.Gradient.Color = ColorSequence.new({ ColorSequenceKeypoint.new(0,Library.BackgroundColor), ColorSequenceKeypoint.new(0.5, Library.AccentColor), ColorSequenceKeypoint.new(1.00, Library.BackgroundColor) });
+            Divider.Gradient.Parent = DividerInner;
         });
 
         Library:AddToRegistry(DividerOuter, {
