@@ -1206,7 +1206,7 @@ do
 
 
         local DividerInner = Library:Create('Frame', {
-            BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+            BackgroundColor3 = Library.MainColor;
             BorderColor3 = Library.OutlineColor;
             BorderMode = Enum.BorderMode.Inset;
             Size = UDim2.new(1, 0, 1, 0);
@@ -1214,35 +1214,13 @@ do
             Parent = DividerOuter;
         });
 
-        local DividerGradient = Library:Create('UIGradient', {
-            Color = ColorSequence.new({ 
-                ColorSequenceKeypoint.new(0,Library.BackgroundColor), 
-                ColorSequenceKeypoint.new(0.2,Library.BackgroundColor), 
-                ColorSequenceKeypoint.new(0.5, Library.AccentColor), 
-                ColorSequenceKeypoint.new(0.8,Library.BackgroundColor), 
-                ColorSequenceKeypoint.new(1, Library.BackgroundColor) 
-            });
-            Rotation = 90;
-            Parent = DividerInner;
-        });
-
         Library:AddToRegistry(DividerOuter, {
             BorderColor3 = 'Black';
         });
 
         Library:AddToRegistry(DividerInner, {
-            BackgroundColor3 = Color3.fromRGB(255, 255, 255);
+            BackgroundColor3 = 'MainColor';
             BorderColor3 = 'OutlineColor';
-        });
-
-        Library:AddToRegistry(DividerGradient, {
-            Color = ColorSequence.new({ 
-                ColorSequenceKeypoint.new(0,Library.BackgroundColor), 
-                ColorSequenceKeypoint.new(0.2,Library.BackgroundColor), 
-                ColorSequenceKeypoint.new(0.5, Library.AccentColor), 
-                ColorSequenceKeypoint.new(0.8,Library.BackgroundColor), 
-                ColorSequenceKeypoint.new(1, Library.BackgroundColor) 
-            });
         });
 
         Groupbox:AddBlank(9);
