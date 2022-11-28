@@ -775,7 +775,7 @@ do
         });
 
         local ContainerLabel = Library:CreateLabel({
-            TextXAlignment = Enum.TextXAlignment.Left;
+            TextXAlignment = Enum.TextXAlignment.Center;
             Size = UDim2.new(1, 0, 0, 18);
             TextSize = 13;
             Visible = false;
@@ -2273,7 +2273,7 @@ do
         BackgroundColor3 = 'AccentColor';
     }, true);
 
-    local KeybindLabel = Library:CreateLabel({
+    local KeybindLabel = Library:CreateLabel2({
         Size = UDim2.new(1, 0, 0, 20);
         Position = UDim2.fromOffset(5, 2),
         TextXAlignment = Enum.TextXAlignment.Center,
