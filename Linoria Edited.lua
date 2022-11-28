@@ -29,6 +29,7 @@ local Library = {
     HudRegistry = {};
 
     FontColor = Color3.fromRGB(118, 118, 118);
+    FontColor2 = Color3.fromRGB(198, 198, 198);
     MainColor = Color3.fromRGB(11, 11, 11);
     BackgroundColor = Color3.fromRGB(15, 15, 15);
     AccentColor = Color3.fromRGB(93, 88, 157);
@@ -107,7 +108,7 @@ function Library:CreateLabel2(Properties, IsHud)
         TextStrokeTransparency = 0;
     });
     Library:AddToRegistry(_Instance, {
-        TextColor3 = Color3.fromRGB(198, 198, 198);
+        TextColor3 = 'FontColor2';
     }, IsHud);
     return Library:Create(_Instance, Properties);
 end;
