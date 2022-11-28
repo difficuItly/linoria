@@ -31,7 +31,7 @@ local Library = {
     FontColor = Color3.fromRGB(118, 118, 118);
     MainColor = Color3.fromRGB(11, 11, 11);
     BackgroundColor = Color3.fromRGB(15, 15, 15);
-    AccentColor = Color3.fromRGB(114, 87, 173);
+    AccentColor = Color3.fromRGB(93, 88, 157);
     OutlineColor = Color3.fromRGB(25, 25, 25);
 
     Black = Color3.new(0, 0, 0);
@@ -95,6 +95,20 @@ function Library:CreateLabel(Properties, IsHud)
         TextColor3 = 'FontColor';
     }, IsHud);
 
+    return Library:Create(_Instance, Properties);
+end;
+
+function Library:CreateLabel2(Properties, IsHud)
+    local _Instance = Library:Create('TextLabel', {
+        BackgroundTransparency = 1;
+        Font = Enum.Font.Code;
+        TextColor3 = Color3.fromRGB(198, 198, 198)
+        TextSize = 16;
+        TextStrokeTransparency = 0;
+    });
+    Library:AddToRegistry(_Instance, {
+        TextColor3 = Color3.fromRGB(198, 198, 198);
+    }, IsHud);
     return Library:Create(_Instance, Properties);
 end;
 
@@ -2664,7 +2678,7 @@ function Library:CreateWindow(...)
                 BackgroundColor3 = 'AccentColor';
             });
 
-            local GroupboxLabel = Library:CreateLabel({
+            local GroupboxLabel = Library:CreateLabel2({
                 Size = UDim2.new(1, 0, 0, 18);
                 Position = UDim2.new(0, 4, 0, 2);
                 TextSize = 14;
@@ -2793,7 +2807,7 @@ function Library:CreateWindow(...)
                     BackgroundColor3 = 'MainColor';
                 });
 
-                local ButtonLabel = Library:CreateLabel({
+                local ButtonLabel = Library:CreateLabel2({
                     Size = UDim2.new(1, 0, 1, 0);
                     TextSize = 14;
                     Text = Name;
