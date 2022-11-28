@@ -2864,7 +2864,7 @@ function Library:CreateWindow(...)
                     BackgroundColor3 = Library.BackgroundColor;
                     BorderSizePixel = 0;
                     Position = UDim2.new(0, 0, 1, 0);
-                    Size = UDim2.new(0.09, 0, 0, 1);
+                    Size = UDim2.new(0.99, 0, 0, 1);
                     Visible = false;
                     ZIndex = 9;
                     Parent = Button;
