@@ -2465,7 +2465,7 @@ function Library:CreateWindow(...)
         BorderColor3 = 'AccentColor';
     });
 
-    local WindowLabel = Library:CreateLabel({
+    local WindowLabel = Library:CreateLabel2({
         Position = UDim2.new(0, 7, 0, 0);
         Size = UDim2.new(0, 0, 0, 25);
         RichText = true;
@@ -2573,9 +2573,11 @@ function Library:CreateWindow(...)
             Parent = TabButton;
         });
 
+        --[[
         Library:AddToRegistry(Highlight, {
             BackgroundColor3 = 'AccentColor';
         });
+        ]]--
 
         local Blocker = Library:Create('Frame', {
             BackgroundColor3 = Library.MainColor;
