@@ -2652,6 +2652,7 @@ function Library:CreateWindow(...)
             TabButtonLabel.TextColor3 = Library.AccentColor;
             Highlight.BackgroundColor3 = Library.AccentColor;
             Highlight.ZIndex = 3;
+            Highlight.Visible = true;
             Library.RegistryMap[TabButton].Properties.BackgroundColor3 = 'MainColor2';
             TabFrame.Visible = true;
         end;
@@ -2662,6 +2663,7 @@ function Library:CreateWindow(...)
             TabButtonLabel.TextColor3 = Library.FontColor;
             Highlight.BackgroundColor3 = Library.OutlineColor;
             Highlight.ZIndex = 1;
+            Highlight.Visible = false;
             Library.RegistryMap[TabButton].Properties.BackgroundColor3 = 'BackgroundColor';
             TabFrame.Visible = false;
         end;
