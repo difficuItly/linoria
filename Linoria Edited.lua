@@ -2222,7 +2222,7 @@ do
         end
     });
 
-    local WatermarkLabel = Library:CreateLabel({
+    local WatermarkLabel = Library:CreateLabel2({
         Position = UDim2.new(0, 5, 0, 0);
         Size = UDim2.new(1, -4, 1, 0);
         TextSize = 14;
