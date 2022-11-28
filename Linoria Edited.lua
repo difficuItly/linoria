@@ -2265,7 +2265,7 @@ do
     local ColorFrame = Library:Create('Frame', {
         BackgroundColor3 = Library.AccentColor;
         BorderSizePixel = 0;
-        Size = UDim2.new(1, 0, 0, 2);
+        Size = UDim2.new(1, 0, 0, 1);
         ZIndex = 102;
         Parent = KeybindInner;
     });
@@ -2509,6 +2509,10 @@ function Library:CreateWindow(...)
         Size = UDim2.new(1, 0, 0, 1);
         ZIndex = 5;
         Parent = MainSectionOuter;
+    });
+
+    Library:AddToRegistry(Highlight, {
+        BackgroundColor3 = 'AccentColor';
     });
 
     local TabArea = Library:Create('Frame', {
