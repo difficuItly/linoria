@@ -2569,7 +2569,7 @@ function Library:CreateWindow(...)
             BackgroundColor3 = Library.AccentColor;
             BorderSizePixel = 0;
             Size = UDim2.new(1, 0, 0, 1);
-            ZIndex = 5;
+            ZIndex = 1;
             Parent = TabButton;
         });
 
@@ -2639,7 +2639,7 @@ function Library:CreateWindow(...)
             Blocker.BackgroundTransparency = 0;
             TabButton.BackgroundColor3 = Library.MainColor2;
             TabButtonLabel.TextColor3 = Library.AccentColor;
-            Highlight.Parent = TabButtonLabel
+            Highlight.BackgroundColor3 = Library.AccentColor;
             Library.RegistryMap[TabButton].Properties.BackgroundColor3 = 'MainColor2';
             TabFrame.Visible = true;
         end;
@@ -2648,6 +2648,7 @@ function Library:CreateWindow(...)
             Blocker.BackgroundTransparency = 1;
             TabButton.BackgroundColor3 = Library.BackgroundColor;
             TabButtonLabel.TextColor3 = Library.FontColor;
+            Highlight.BackgroundColor3 = Library.BackgroundColor;
             Library.RegistryMap[TabButton].Properties.BackgroundColor3 = 'BackgroundColor';
             TabFrame.Visible = false;
         end;
