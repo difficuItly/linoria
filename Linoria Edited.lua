@@ -2564,6 +2564,18 @@ function Library:CreateWindow(...)
             Parent = TabButton;
         });
 
+        local Highlight = Library:Create('Frame', {
+            BackgroundColor3 = Library.AccentColor;
+            BorderSizePixel = 0;
+            Size = UDim2.new(1, 0, 0, 2);
+            ZIndex = 5;
+            Parent = TabButtonLabel;
+        });
+
+        Library:AddToRegistry(Highlight, {
+            BackgroundColor3 = 'AccentColor';
+        });
+
         local Blocker = Library:Create('Frame', {
             BackgroundColor3 = Library.MainColor;
             BorderSizePixel = 0;
@@ -2816,6 +2828,18 @@ function Library:CreateWindow(...)
                     TextXAlignment = Enum.TextXAlignment.Center;
                     ZIndex = 7;
                     Parent = Button;
+                });
+
+                local Highlight = Library:Create('Frame', {
+                    BackgroundColor3 = Library.AccentColor;
+                    BorderSizePixel = 0;
+                    Size = UDim2.new(1, 0, 0, 2);
+                    ZIndex = 5;
+                    Parent = ButtonLabel;
+                });
+    
+                Library:AddToRegistry(Highlight, {
+                    BackgroundColor3 = 'AccentColor';
                 });
 
                 local Block = Library:Create('Frame', {
