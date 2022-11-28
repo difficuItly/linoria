@@ -2669,6 +2669,7 @@ function Library:CreateWindow(...)
                 Position = UDim2.new(0, 4, 0, 2);
                 TextSize = 14;
                 Text = Info.Name;
+                TextColor3 = Color3.fromRGB(198, 198, 198);
                 TextXAlignment = Enum.TextXAlignment.Left;
                 ZIndex = 5;
                 Parent = BoxInner;
@@ -2796,6 +2797,7 @@ function Library:CreateWindow(...)
                     Size = UDim2.new(1, 0, 1, 0);
                     TextSize = 14;
                     Text = Name;
+                    TextColor3 = Color3.fromRGB(198, 198, 198);
                     TextXAlignment = Enum.TextXAlignment.Center;
                     ZIndex = 7;
                     Parent = Button;
